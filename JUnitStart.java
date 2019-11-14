@@ -7,7 +7,6 @@ import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -25,17 +24,13 @@ public class JUnitStart {
 	
 	
 
-//	@BeforeClass
-	public static void setUpBeforeClass() throws Exception {
-		System.out.println("Before class... is empty.");
-	}
+	@BeforeClass
+	public static void setUpBeforeClass() throws Exception {}
 
 	
 	
-//	@AfterClass
-	public static void tearDownAfterClass() throws Exception {
-		System.out.println("After class... is empty.");
-	}
+	@AfterClass
+	public static void tearDownAfterClass() throws Exception {}
 	
 	
 
@@ -58,6 +53,7 @@ public class JUnitStart {
 	@After
 	public void tearDown() throws Exception {
 //		System.out.println("After...");
+//		Thread.sleep(3000);
 		System.out.println(testName + " test complete!");
 		driver.close();
 		System.out.println("Driver closed.");
